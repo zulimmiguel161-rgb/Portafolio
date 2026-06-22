@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio</title>
+  <link rel="stylesheet" href="./output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black">
+  <nav class="border-b bg-black text-white border-white-200 flex row gap-2 justify-center item-center">
+    <div class="flex row w-full gap-5 justify-end item-center p-2 font-fira">
+      <a href="#sobremi">Sobre mi</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+  <section class="flex justify-center items-center h-[calc(100vh-25rem)] flex-col border-b gap-2">
+    <h1 class="text-white font-inter text-9xl uppercase font-bold">Zulim Miguel</h1>
+    <h2 class="text-white font-fira text-3xl uppercase p-5">Desarrolladora frontend</h2>
+    <h3 class="font-fira text-white text-1xl">HTML5 · CSS3 · JavaScript · Tailwind CSS · Figma · Git/GitHub</h3>
+  </section>
+  <section class="border-b py-12" id="sobremi">
+  <div class="max-w-[1200px] mx-auto flex gap-12">
+    
+    <h2 class="text-white text-2xl font-inter uppercase font-bold w-2/5">
+      Sobre mí
+    </h2>
+    <div class="font-fira text-white flex flex-col gap-8">
+    <p>
+      Tengo formación artística, y eso define cómo desarrollo.
+    </p>
+    <p>
+      No llego a un proyecto a replicar, llego a proponer. Antes de escribir una línea de código entiendo el concepto, el tema, la intención. Desde ahí sé qué animación va ahí, qué hover tiene sentido, qué transición le da carácter a esa página en particular. No aplico soluciones genéricas: las pienso para cada proyecto.
+    </p>
+    <p>
+      Trabajo de la mano con los diseñadores, no solo ejecutando su visión sino enriqueciéndola. Aporto ideas de interacción que complementan el diseño y abro ese diálogo porque creo que las mejores páginas nacen de esa colaboración.
+    </p>
+    <p>
+      Tengo ojo para el espacio, el equilibrio y el color. Noto cuando algo necesita más padding, cuando una composición no respira, cuando un elemento rompe la armonía visual. No necesito que me lo expliquen: lo veo.
+    </p>
+    <p>
+      Mi principio con el código es el mismo que con el diseño, no muevo nada que no entienda. Me apoyo en IA como parte de mi flujo de trabajo, pero siempre desde la lógica: entiendo lo que genera, sé por qué funciona y lo adapto con criterio. Copiar sin entender no es una opción para mí.
+    </p>
+    <p>
+      Entrego páginas que no solo se ven bien, se sienten bien.
+    </p>
+    </div>
+
+  </div>
+    <h2 class="max-w-[1200px] mx-auto pt-20 text-white text-2xl font-inter uppercase font-bold"  id="proyectos">Proyectos</h2>
+</section>
+
+  <section class="grid w-full
+              grid-cols-1
+              sm:grid-cols-2
+              md:grid-cols-3
+              lg:grid-cols-4
+              max-h-[350px]">
+
+    <div class="border-r border-b border-t-0 text-white h-[350px] flex flex-col items-end justify-between  uppercase font-fira relative z-10 overflow-hidden">
+        <div class="flex flex-col justify-end items-end p-3">
+          <p>Krismar Educación</p>
+          <p>Sitio web institucional · 2024</p>
+        </div>
+          <a
+          href="https://www.krismar.mx/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full z-20 flex items-end justify-end text-white"
+          >
+            <img 
+              src="src/img/proyecto-1.png"
+              class="absolute w-full h-full opacity-0 hover:opacity-30 transition duration-500 z-0 "
+          >
+          </a>
+    </div>
+
+    <div class="border-r border-b border-t-0 text-white h-[350px] flex flex-col items-star justify-between  uppercase font-fira relative z-10 overflow-hidden">
+      <div class="flex flex-col justify-end items-end p-3">
+        <p>Centro Multimedia · CENART</p>
+        <p>La Fábrica Editorial · 2026</p>
+      </div>
+        
+        <a
+        href="https://cmm.cenart.gob.mx/Fabrica_Editorial/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full z-20 flex items-end justify-end text-white">
+        <img 
+            src="src/img/proyecto-2.png"
+            class="absolute w-full h-full object-cover opacity-0 hover:opacity-30 transition duration-500 z-0 "> 
+      </a>
+
+    </div>
+
+    <div class="border-r border-b border-t-0 text-white h-[350px] flex flex-col items-star justify-between  uppercase font-fira relative z-10 overflow-hidden">
+      <div class=" w-full flex flex-col justify-end items-end p-3">
+        <p>Centro Multimedia · CENART</p>
+        <p class="text-justify">LEIVA · 2026</p>
+      </div>
+        
+        <a
+        href="https://cmm.cenart.gob.mx/leiva/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full z-20 flex items-end justify-end text-white"
+        >
+        <img 
+            src="src/img/proyecto-3.png"
+            class="absolute object-cover w-full h-full opacity-0 hover:opacity-30 transition duration-500 z-0 "
+        >
+      </a>
+
+    </div>
+
+    <div class="border-r border-b border-t-0 text-white h-[350px] flex flex-col items-star justify-between  uppercase font-fira relative z-10 overflow-hidden">
+      <div class="flex flex-col justify-end items-end p-3">
+        <p>Centro Multimedia · CENART</p>
+        <p>DiseñaLab · 2026</p>
+      </div>
+      <a
+        href="https://cmm.cenart.gob.mx/DisenaLab/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full z-20 flex items-end justify-end text-white"
+      >
+          <img 
+            src="src/img/proyecto-4.png"
+            class="absolute w-auto h-full object-cover opacity-0 hover:opacity-20 transition duration-500 z-0 "
+        >
+      </a>
+    </div>
+  </section>
+  <section id="contacto" class="border-t border-white py-20 flex flex-col items-center gap-10 bg-black">
+
+    <h2 class="font-inter font-bold text-white uppercase text-center leading-tight text-5xl md:text-7xl">
+      Si tienes una idea, <br>
+      <span class="border-b-2 border-white pb-1">yo le doy vida.</span>
+    </h2>
+
+    <p class="font-fira text-white/50 text-sm tracking-widest text-center uppercase">
+      Hablemos · El siguiente proyecto puede ser el tuyo
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-6 mt-4">
+      <a href="mailto:zulimmiguel161@gmail.com"
+        class="font-fira text-xs tracking-widest uppercase text-white border border-white/30 px-6 py-3 hover:bg-white hover:text-black transition duration-300">
+        ✉ Email
+      </a>
+      <a href="https://www.linkedin.com/in/zulim-miguel-065114417?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank"
+        class="font-fira text-xs tracking-widest uppercase text-white border border-white/30 px-6 py-3 hover:bg-white hover:text-black transition duration-300">
+        in LinkedIn
+      </a>
+      <a href="https://github.com/zulimmiguel161-rgb" target="_blank"
+        class="font-fira text-xs tracking-widest uppercase text-white border border-white/30 px-6 py-3 hover:bg-white hover:text-black transition duration-300">
+        ⌥ GitHub
+      </a>
+    </div>
+
+    <p class="font-fira text-white/20 text-xs tracking-widest uppercase mt-12">
+      ZULIMMIGUEL · DESARROLLADORA FRONTEND · 2026
+    </p>
+
+  </section>
+</body>
+</html>
