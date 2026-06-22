@@ -12,22 +12,24 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black">
-  <nav class="border-b bg-black text-white border-white-200 flex row gap-2 justify-center item-center">
-    <div class="flex row w-full gap-5 justify-end item-center p-2 font-fira">
-      <a href="#sobremi">Sobre mi</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
+  <nav class="border-b bg-black text-white border-white-200 flex row gap-2 justify-center item-center p-2">
+    <div class="flex row w-full gap-5 justify-end items-center p-2 font-fira">
+      <a href="#sobremi" class="hover:underline underline-offset-4 transition-all duration-300" >Sobre mi</a>
+      <a href="#proyectos" class="hover:underline underline-offset-4 transition-all duration-300">Proyectos</a>
+      <a href="#contacto" class="hover:underline underline-offset-4 transition-all duration-300">Contacto</a>
     </div>
   </nav>
-  <section class="flex justify-center items-center h-[calc(100vh-25rem)] flex-col border-b gap-2">
-    <h1 class="text-white font-inter text-9xl uppercase font-bold">Zulim Miguel</h1>
-    <h2 class="text-white font-fira text-3xl uppercase p-5">Desarrolladora frontend</h2>
-    <h3 class="font-fira text-white text-1xl">HTML5 · CSS3 · JavaScript · Tailwind CSS · Figma · Git/GitHub</h3>
+  <section class="flex justify-center items-center h-[calc(100vh-25rem)] flex-col border-b gap-2 border-box">
+    <div class="flex flex-col justify-center align-middle items-center gap-10">
+    <h1 class="text-white font-inter text-5xl md:text-8xl uppercase font-bold text-center">Zulim Miguel</h1>
+    <h2 class="text-white font-fira text-3xl uppercase text-center">Desarrolladora frontend</h2>
+    <h3 class="font-fira text-white text-b md:text-3xl text-center p-2">HTML5 · CSS3 · JavaScript · Tailwind CSS · Figma · Git/GitHub</h3>
+    </div>
   </section>
-  <section class="border-b py-12" id="sobremi">
-  <div class="max-w-[1200px] mx-auto flex gap-12">
+  <section class="border-b p-12" id="sobremi">
+  <div class="max-w-[1200px] mx-auto flex gap-12 md: flex-col">
     
-    <h2 class="text-white text-2xl font-inter uppercase font-bold w-2/5">
+    <h2 class="text-white text-2xl font-inter uppercase font-bold w-2/5 text-nowrap">
       Sobre mí
     </h2>
     <div class="font-fira text-white flex flex-col gap-8">
@@ -55,12 +57,12 @@
     <h2 class="max-w-[1200px] mx-auto pt-20 text-white text-2xl font-inter uppercase font-bold"  id="proyectos">Proyectos</h2>
 </section>
 
-  <section class="grid w-full
+  <section class="grid w-full 
               grid-cols-1
               sm:grid-cols-2
               md:grid-cols-3
               lg:grid-cols-4
-              max-h-[350px]">
+              relative">
 
     <div class="border-r border-b border-t-0 text-white h-[350px] flex flex-col items-end justify-between  uppercase font-fira relative z-10 overflow-hidden">
         <div class="flex flex-col justify-end items-end p-3">
@@ -75,12 +77,12 @@
           >
             <img 
               src="src/img/proyecto-1.png"
-              class="absolute w-full h-full opacity-0 hover:opacity-30 transition duration-500 z-0 "
+              class="absolute w-full h-full opacity-0 hover:opacity-30 transition duration-500 z-0 object-cover "
           >
           </a>
     </div>
 
-    <div class="border-r border-b border-t-0 text-white h-[350px] flex flex-col items-star justify-between  uppercase font-fira relative z-10 overflow-hidden">
+    <div class="border-r border-b border-t-0 text-white h-[350px] flex flex-col items-end justify-between  uppercase font-fira relative z-10 overflow-hidden">
       <div class="flex flex-col justify-end items-end p-3">
         <p>Centro Multimedia · CENART</p>
         <p>La Fábrica Editorial · 2026</p>
@@ -98,7 +100,7 @@
 
     </div>
 
-    <div class="border-r border-b border-t-0 text-white h-[350px] flex flex-col items-star justify-between  uppercase font-fira relative z-10 overflow-hidden">
+    <div class="border-r border-b border-t-0 text-white h-[350px] flex flex-col items-start justify-between  uppercase font-fira relative z-10 overflow-hidden">
       <div class=" w-full flex flex-col justify-end items-end p-3">
         <p>Centro Multimedia · CENART</p>
         <p class="text-justify">LEIVA · 2026</p>
@@ -118,7 +120,7 @@
 
     </div>
 
-    <div class="border-r border-b border-t-0 text-white h-[350px] flex flex-col items-star justify-between  uppercase font-fira relative z-10 overflow-hidden">
+    <div class="border-r border-b border-t-0 text-white h-[350px] flex flex-col items-end justify-between  uppercase font-fira relative z-10 overflow-hidden">
       <div class="flex flex-col justify-end items-end p-3">
         <p>Centro Multimedia · CENART</p>
         <p>DiseñaLab · 2026</p>
