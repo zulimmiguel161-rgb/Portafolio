@@ -55,3 +55,15 @@ h1,h2{font-family:var(--inter);text-transform:uppercase}
 .tag{font-size:.75rem;color:rgba(255,255,255,.75)}
 .contact-note{color:rgba(255,255,255,.7)}
 .foot{color:rgba(255,255,255,.6)}
+
+@media (min-width:600px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){
+  .grid{grid-template-columns:repeat(4,1fr)}
+  .about{display:grid;grid-template-columns:1fr 2fr;gap:3rem}
+}
+@media (hover:hover){
+  .card-img{opacity:0}
+  .desc{opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s}
+  .card:hover .card-img,.card:focus-within .card-img{opacity:.2;transform:scale(1.05)}
+  .card:hover .desc,.card:focus-within .desc{opacity:1;transform:none}
+}
