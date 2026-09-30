@@ -1,236 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio</title>
-  <link rel="stylesheet" href="./output.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* --- Animaciones de entrada (scroll) --- */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-
-    .hero-item {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: heroIn 0.8s ease forwards;
-    }
-    .hero-item:nth-child(1) { animation-delay: 0.1s; }
-    .hero-item:nth-child(2) { animation-delay: 0.4s; }
-    .hero-item:nth-child(3) { animation-delay: 0.7s; }
-    .hero-item:nth-child(4) { animation-delay: 1.0s; }
-
-    @keyframes heroIn {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-
-    .project-img {
-      transition: opacity 0.5s ease, transform 0.6s ease;
-    }
-    .project-card:hover .project-img {
-      transform: scale(1.05);
-    }
-
-
-    .project-desc {
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.4s ease, transform 0.4s ease;
-    }
-    .project-card:hover .project-desc {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
 </head>
-<body class="bg-black">
-  <nav class="border-b bg-black text-white border-white-200 flex row gap-2 justify-center item-center p-2">
-    <div class="flex row w-full gap-5 justify-end items-center p-2 font-fira">
-      <a href="#sobremi" class="hover:underline underline-offset-4 transition-all duration-300" >Sobre mi</a>
-      <a href="#proyectos" class="hover:underline underline-offset-4 transition-all duration-300">Proyectos</a>
-      <a href="CV_ZulimMiguel.pdf" target="_blank" class="hover:underline underline-offset-4 transition-all duration-300"> CV
-      </a>
-      <a href="#contacto" class="hover:underline underline-offset-4 transition-all duration-300">Contacto</a>
-    </div>
+<body>
+<header>
+  <nav class="nav" aria-label="Principal">
+    <a href="#sobremi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="CV_ZulimMiguel.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+    <a href="#contacto">Contacto</a>
   </nav>
+</header>
+<main>
+  <section class="hero" aria-label="Presentación">
+    <h1 class="hero-item">Zulim Miguel</h1>
+    <p class="hero-item role">Maquetadora web &amp; Frontend</p>
+    <p class="hero-item lead">Convierto diseños en interfaces vivas. De Figma al navegador, sin perder ni un detalle en el camino.</p>
+    <p class="hero-item stack">HTML5 · CSS3 · JavaScript · Tailwind CSS · Figma · Git/GitHub</p>
+  </section>
 
-  <section class="flex justify-center items-center h-[calc(100vh-25rem)] flex-col border-b gap-2 border-box">
-    <div class="flex flex-col justify-center align-middle items-center gap-6">
-      <h1 class="hero-item text-white font-inter text-5xl md:text-8xl uppercase font-bold text-center">Zulim Miguel</h1>
-      <h2 class="hero-item text-white font-fira text-3xl uppercase text-center">Maquetadora web & Frontend</h2>
-      <p class="hero-item font-fira text-white/60 text-lg md:text-2xl text-center max-w-2xl">
-        Convierto diseños en interfaces vivas. De Figma al navegador, sin perder ni un detalle en el camino.
-      </p>
-      <h3 class="hero-item font-fira text-white text-b md:text-2xl text-center p-2 tracking-widest">HTML5 · CSS3 · JavaScript · Tailwind CSS · Figma · Git/GitHub</h3>
+  <section id="sobremi" class="about" aria-labelledby="t-sobremi">
+    <h2 id="t-sobremi" class="reveal">Sobre mí</h2>
+    <div class="prose">
+      <p class="reveal">Tengo formación artística, y eso define cómo trabajo.</p>
+      <p class="reveal">No llego a un proyecto a replicar, llego a proponer. Antes de maquetar una sola línea entiendo el concepto, el tema, la intención. Desde ahí sé qué animación va ahí, qué hover tiene sentido, qué transición le da carácter a esa página en particular. No aplico soluciones genéricas: las pienso para cada proyecto.</p>
+      <p class="reveal">Trabajo de la mano con diseñadores, no solo ejecutando su visión sino enriqueciéndola. Aporto ideas de interacción que complementan el diseño y abro ese diálogo porque creo que las mejores páginas nacen de esa colaboración.</p>
+      <p class="reveal">Tengo ojo para el espacio, el equilibrio y el color. Noto cuando algo necesita más padding, cuando una composición no respira, cuando un elemento rompe la armonía visual. No necesito que me lo expliquen: lo veo.</p>
+      <p class="reveal">Convierto diseños de Figma en sitios responsive, cuidados en cada detalle. Me apoyo en IA como parte de mi flujo de trabajo, pero siempre desde la lógica: entiendo lo que genera, sé por qué funciona y lo adapto con criterio. Copiar sin entender no es una opción para mí.</p>
+      <p class="reveal">Entrego páginas que no solo se ven bien, se sienten bien.</p>
     </div>
   </section>
 
-  <section class="border-b p-12" id="sobremi">
-  <div class="max-w-[1200px] mx-auto flex gap-12 md: flex-col">
-    
-    <h2 class="reveal text-white text-2xl font-inter uppercase font-bold w-2/5 text-nowrap">
-      Sobre mí
-    </h2>
-    <div class="font-fira text-white flex flex-col gap-8">
-    <p class="reveal">
-      Tengo formación artística, y eso define cómo trabajo.
-    </p>
-    <p class="reveal">
-      No llego a un proyecto a replicar, llego a proponer. Antes de maquetar una sola línea entiendo el concepto, el tema, la intención. Desde ahí sé qué animación va ahí, qué hover tiene sentido, qué transición le da carácter a esa página en particular. No aplico soluciones genéricas: las pienso para cada proyecto.
-    </p>
-    <p class="reveal">
-      Trabajo de la mano con diseñadores, no solo ejecutando su visión sino enriqueciéndola. Aporto ideas de interacción que complementan el diseño y abro ese diálogo porque creo que las mejores páginas nacen de esa colaboración.
-    </p>
-    <p class="reveal">
-      Tengo ojo para el espacio, el equilibrio y el color. Noto cuando algo necesita más padding, cuando una composición no respira, cuando un elemento rompe la armonía visual. No necesito que me lo expliquen: lo veo.
-    </p>
-    <p class="reveal">
-      Convierto diseños de Figma en sitios responsive, cuidados en cada detalle. Me apoyo en IA como parte de mi flujo de trabajo, pero siempre desde la lógica: entiendo lo que genera, sé por qué funciona y lo adapto con criterio. Copiar sin entender no es una opción para mí.
-    </p>
-    <p class="reveal">
-      Entrego páginas que no solo se ven bien, se sienten bien.
-    </p>
-    </div>
-
-  </div>
-    <h2 class="reveal max-w-[1200px] mx-auto pt-20 text-white text-2xl font-inter uppercase font-bold"  id="proyectos">Proyectos</h2>
-</section>
-
-  <section class="grid w-full 
-              grid-cols-1
-              sm:grid-cols-2
-              md:grid-cols-3
-              lg:grid-cols-4
-              relative">
-
-    <!-- Krismar -->
-    <a href="https://www.krismar.mx/" target="_blank" rel="noopener noreferrer"
-       class="project-card reveal group border-r border-b border-t-0 text-white h-[350px] flex flex-col justify-between uppercase font-fira relative z-10 overflow-hidden">
-      <img src="src/img/proyecto-1.png"
-           class="project-img absolute w-full h-full opacity-0 group-hover:opacity-20 transition duration-500 z-0 object-cover">
-      <div class="relative z-20 p-3">
-        <span class="text-[10px] tracking-widest text-white/50 border border-white/30 px-2 py-1 inline-block normal-case">Maquetación · Responsive</span>
-      </div>
-      <div class="relative z-20 p-3 flex flex-col gap-2 items-end text-right">
-        <p class="project-desc normal-case font-fira text-sm text-white/80 max-w-[220px]">
-          Maquetación completa desde Figma, 100% responsiva. Trabajo en equipo con diseño y una programadora Angular.
-        </p>
-        <p>Krismar Educación</p>
-        <p>Sitio web institucional · 2024</p>
-      </div>
-    </a>
-
-    <!-- La Fábrica Editorial -->
-    <a href="https://cmm.cenart.gob.mx/Fabrica_Editorial/" target="_blank" rel="noopener noreferrer"
-       class="project-card reveal group border-r border-b border-t-0 text-white h-[350px] flex flex-col justify-between uppercase font-fira relative z-10 overflow-hidden">
-      <img src="src/img/proyecto-2.png"
-           class="project-img absolute w-full h-full object-cover opacity-0 group-hover:opacity-20 transition duration-500 z-0">
-      <div class="relative z-20 p-3">
-        <span class="text-[10px] tracking-widest text-white/50 border border-white/30 px-2 py-1 inline-block normal-case">★ Interacción propia</span>
-      </div>
-      <div class="relative z-20 p-3 flex flex-col gap-2 items-end text-right">
-        <p class="project-desc normal-case font-fira text-sm text-white/80 max-w-[220px]">
-          Propuse e implementé un modo día/noche dinámico con JavaScript, cambiando variables root de CSS en vivo.
-        </p>
-        <p>Centro Multimedia · CENART</p>
-        <p>La Fábrica Editorial · 2026</p>
-      </div>
-    </a>
-
-    <!-- LEIVA -->
-    <a href="https://cmm.cenart.gob.mx/leiva/" target="_blank" rel="noopener noreferrer"
-       class="project-card reveal group border-r border-b border-t-0 text-white h-[350px] flex flex-col justify-between uppercase font-fira relative z-10 overflow-hidden">
-      <img src="src/img/proyecto-3.png"
-           class="project-img absolute object-cover w-full h-full opacity-0 group-hover:opacity-20 transition duration-500 z-0">
-      <div class="relative z-20 p-3">
-        <span class="text-[10px] tracking-widest text-white/50 border border-white/30 px-2 py-1 inline-block normal-case">Diseño + Frontend · 3D</span>
-      </div>
-      <div class="relative z-20 p-3 flex flex-col gap-2 items-end text-right">
-        <p class="project-desc normal-case font-fira text-sm text-white/80 max-w-[220px]">
-          Diseño y maquetación en conjunto. Cámaras y movimientos 3D, animaciones y fondos dinámicos con JavaScript.
-        </p>
-        <p>LEIVA</p>
-        <p>Centro Multimedia · CENART · 2026</p>
-      </div>
-    </a>
-
-    <!-- DiseñaLab -->
-    <a href="https://cmm.cenart.gob.mx/DisenaLab/" target="_blank" rel="noopener noreferrer"
-       class="project-card reveal group border-r border-b border-t-0 text-white h-[350px] flex flex-col justify-between uppercase font-fira relative z-10 overflow-hidden">
-      <img src="src/img/proyecto-4.png"
-           class="project-img absolute w-full h-full object-cover opacity-0 group-hover:opacity-20 transition duration-500 z-0">
-      <div class="relative z-20 p-3">
-        <span class="text-[10px] tracking-widest text-white/50 border border-white/30 px-2 py-1 inline-block normal-case">★ Interacción propia · SVG</span>
-      </div>
-      <div class="relative z-20 p-3 flex flex-col gap-2 items-end text-right">
-        <p class="project-desc normal-case font-fira text-sm text-white/80 max-w-[220px]">
-          Construcción visual con frames y SVG. Propuse la interactividad que enriquece la propuesta original.
-        </p>
-        <p>DiseñaLab</p>
-        <p>Centro Multimedia · CENART · 2026</p>
-      </div>
-    </a>
+  <section id="proyectos" aria-labelledby="t-proyectos">
+    <h2 id="t-proyectos" class="section-title reveal">Proyectos</h2>
+    <ul class="grid">
+      <li class="reveal"><article class="card">
+        <img class="card-img" src="src/img/proyecto-1.png" alt="" loading="lazy" decoding="async">
+        <span class="tag">Maquetación · Responsive</span>
+        <div class="card-body">
+          <p class="desc">Maquetación completa desde Figma, 100% responsiva. Trabajo en equipo con diseño y una programadora Angular.</p>
+          <h3><a class="card-link" href="https://www.krismar.mx/" target="_blank" rel="noopener noreferrer">Krismar Educación</a></h3>
+          <p class="meta">Sitio web institucional · 2024</p>
+        </div>
+      </article></li>
+      <li class="reveal"><article class="card">
+        <img class="card-img" src="src/img/proyecto-2.png" alt="" loading="lazy" decoding="async">
+        <span class="tag">★ Interacción propia</span>
+        <div class="card-body">
+          <p class="desc">Propuse e implementé un modo día/noche dinámico con JavaScript, cambiando variables root de CSS en vivo.</p>
+          <h3><a class="card-link" href="https://cmm.cenart.gob.mx/Fabrica_Editorial/" target="_blank" rel="noopener noreferrer">La Fábrica Editorial</a></h3>
+          <p class="meta">Centro Multimedia · CENART · 2026</p>
+        </div>
+      </article></li>
+      <li class="reveal"><article class="card">
+        <img class="card-img" src="src/img/proyecto-3.png" alt="" loading="lazy" decoding="async">
+        <span class="tag">Diseño + Frontend · 3D</span>
+        <div class="card-body">
+          <p class="desc">Diseño y maquetación en conjunto. Cámaras y movimientos 3D, animaciones y fondos dinámicos con JavaScript.</p>
+          <h3><a class="card-link" href="https://cmm.cenart.gob.mx/leiva/" target="_blank" rel="noopener noreferrer">Leiva</a></h3>
+          <p class="meta">Centro Multimedia · CENART · 2026</p>
+        </div>
+      </article></li>
+      <li class="reveal"><article class="card">
+        <img class="card-img" src="src/img/proyecto-4.png" alt="" loading="lazy" decoding="async">
+        <span class="tag">★ Interacción propia · SVG</span>
+        <div class="card-body">
+          <p class="desc">Construcción visual con frames y SVG. Propuse la interactividad que enriquece la propuesta original.</p>
+          <h3><a class="card-link" href="https://cmm.cenart.gob.mx/DisenaLab/" target="_blank" rel="noopener noreferrer">DiseñaLab</a></h3>
+          <p class="meta">Centro Multimedia · CENART · 2026</p>
+        </div>
+      </article></li>
+    </ul>
   </section>
 
-  <section id="contacto" class="border-t border-white py-20 flex flex-col items-center gap-10 bg-black">
-
-    <h2 class="reveal font-inter font-bold text-white uppercase text-center leading-tight text-5xl md:text-7xl">
-      Si tienes una idea, <br>
-      <span class="border-b-2 border-white pb-1">yo le doy vida.</span>
-    </h2>
-
-    <p class="reveal font-fira text-white/50 text-sm tracking-widest text-center uppercase">
-      Hablemos · El siguiente proyecto puede ser el tuyo
-    </p>
-
-    <div class="reveal flex flex-wrap justify-center gap-6 mt-4">
-      <a href="mailto:zulimmiguel161@gmail.com"
-        class="font-fira text-xs tracking-widest uppercase text-white border border-white/30 px-6 py-3 hover:bg-white hover:text-black transition duration-300">
-        ✉ Email
-      </a>
-      <a href="https://www.linkedin.com/in/zulim-miguel-065114417?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank"
-        class="font-fira text-xs tracking-widest uppercase text-white border border-white/30 px-6 py-3 hover:bg-white hover:text-black transition duration-300">
-        in LinkedIn
-      </a>
-      <a href="https://github.com/zulimmiguel161-rgb" target="_blank"
-        class="font-fira text-xs tracking-widest uppercase text-white border border-white/30 px-6 py-3 hover:bg-white hover:text-black transition duration-300">
-        ⌥ GitHub
-      </a>
+  <section id="contacto" class="contact" aria-labelledby="t-contacto">
+    <h2 id="t-contacto" class="reveal">Si tienes una idea,<br><span>yo le doy vida.</span></h2>
+    <p class="reveal contact-note">Hablemos · El siguiente proyecto puede ser el tuyo</p>
+    <div class="reveal actions">
+      <a class="btn" href="mailto:zulimmiguel161@gmail.com">✉ Email</a>
+      <a class="btn" href="https://www.linkedin.com/in/zulim-miguel-065114417" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
+      <a class="btn" href="https://github.com/zulimmiguel161-rgb" target="_blank" rel="noopener noreferrer">⌥ GitHub</a>
     </div>
-
-    <p class="font-fira text-white/20 text-xs tracking-widest uppercase mt-12">
-ZULIMMIGUEL · MAQUETADORA WEB & FRONTEND · 2026
-    </p>
-
   </section>
-
-  <script>
-
-    const revealEls = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); 
-        }
-      });
-    }, { threshold: 0.15 });
-
-    revealEls.forEach(el => observer.observe(el));
-  </script>
+</main>
+<footer class="foot"><p>Zulimmiguel · Maquetadora web &amp; Frontend · 2026</p></footer>
 </body>
 </html>
