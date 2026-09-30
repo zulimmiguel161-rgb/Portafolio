@@ -46,3 +46,12 @@ h1,h2{font-family:var(--inter);text-transform:uppercase}
 .btn:hover{background:var(--fg);color:var(--bg)}
 .foot{padding:2rem 1.25rem;text-align:center;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.2)}
 .foot p{margin:0}
+
+.skip{position:absolute;left:1rem;top:-4rem;z-index:10;padding:.5rem 1rem;background:#fff;color:#000}
+.skip:focus{top:1rem}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.card:focus-within{outline:2px solid #fff;outline-offset:-3px}
+.tag{font-size:.75rem;color:rgba(255,255,255,.75)}
+.contact-note{color:rgba(255,255,255,.7)}
+.foot{color:rgba(255,255,255,.6)}
