@@ -12,21 +12,23 @@ if (reduce || !('IntersectionObserver' in window)) {
 }
 const botones = document.querySelectorAll('.acordeon-btn');
 
+
 botones.forEach((boton) => {
   boton.addEventListener('click', () => {
     const abierto = boton.getAttribute('aria-expanded') === 'true';
     const item = boton.closest('.acordeon-item');
     const panel = document.getElementById(boton.getAttribute('aria-controls'));
 
+    botones.forEach((otro) => {
+      if (otro !== boton) {
+        otro.setAttribute('aria-expanded', 'false');
+        otro.closest('.acordeon-item').classList.remove('abierto');
+        document.getElementById(otro.getAttribute('aria-controls')).inert = true;
+      }
+    });
+
     boton.setAttribute('aria-expanded', String(!abierto));
     item.classList.toggle('abierto', !abierto);
     panel.inert = abierto;
-  });
-  botones.forEach((otro) => {
-    if (otro !== boton) {
-      otro.setAttribute('aria-expanded', 'false');
-      otro.closest('.acordeon-item').classList.remove('abierto');
-      document.getElementById(otro.getAttribute('aria-controls')).inert = true;
-    }
   });
 });
