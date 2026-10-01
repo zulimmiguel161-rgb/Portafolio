@@ -321,6 +321,19 @@ html.js .reveal.visible {
   max-width: 40rem;
   color: rgba(255, 255, 255, 0.8);
 }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.25rem 0.5rem;
+  border: 0.0625rem solid var(--line);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.75);
+}
 /* ==================
    CONTACTO
    ================== */
