@@ -150,11 +150,11 @@ html.js .reveal.visible {
   opacity: 1;
   transform: none;
 }
-
 /* ==================
-   SOBRE MÍ
+   SOBRE MÍ Y PROYECTOS
    ================== */
-.about {
+.about,
+.projects {
   max-width: 75rem;
   margin: 0 auto;
   padding: 3rem 1.25rem;
@@ -164,9 +164,17 @@ html.js .reveal.visible {
 }
 
 .about h2,
-.section-title {
+.projects h2 {
   font-size: 1.5rem;
 }
+
+.prose,
+.acordeon {
+  min-width: 0;
+}
+/* ==================
+   SOBRE MÍ
+   ================== */
 
 .prose {
   display: flex;
@@ -193,17 +201,7 @@ html.js .reveal.visible {
    PROYECTOS
    ================== */
 
-.projects {
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 3rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
 .acordeon {
-  max-width: 60rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -308,6 +306,7 @@ html.js .reveal.visible {
   max-height: 20rem;
   object-fit: cover;
   border: 0.0625rem solid var(--line);
+  margin-top: .5rem;
 }
 
 .acordeon-texto {
@@ -437,20 +436,19 @@ html.js .reveal.visible {
 }
 
 @media (min-width: 64rem) {
-  .grid > li {
-    flex-basis: 25%;
-  }
-
-  .about {
+  .about,
+  .projects {
     flex-direction: row;
     gap: 3rem;
   }
 
-  .about h2 {
+  .about h2,
+  .projects h2 {
     flex: 1;
   }
 
-  .prose {
+  .prose,
+  .acordeon {
     flex: 2;
   }
 }
