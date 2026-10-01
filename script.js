@@ -23,3 +23,10 @@ botones.forEach((boton) => {
     panel.inert = abierto;
   });
 });
+botones.forEach((otro) => {
+  if (otro !== boton) {
+    otro.setAttribute('aria-expanded', 'false');
+    otro.closest('.acordeon-item').classList.remove('abierto');
+    document.getElementById(otro.getAttribute('aria-controls')).inert = true;
+  }
+});
