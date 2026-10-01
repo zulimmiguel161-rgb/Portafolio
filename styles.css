@@ -192,26 +192,19 @@ html.js .reveal.visible {
 /* ==================
    PROYECTOS
    ================== */
-.section-title {
+
+.projects {
   max-width: 75rem;
   margin: 0 auto;
-  padding: 2rem 1.25rem;
+  padding: 3rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.grid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  border-top: 0.0625rem solid var(--line);
-}
-
-.grid > li {
-  display: flex;
-  flex: 0 0 100%;
-  border-right: 0.0625rem solid var(--line);
-  border-bottom: 0.0625rem solid var(--line);
+.projects h2,
+.section-title {
+  font-size: 1.5rem;
 }
 
 .card {
